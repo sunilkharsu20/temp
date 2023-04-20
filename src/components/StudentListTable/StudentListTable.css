@@ -1,0 +1,4 @@
+.outerTable{
+    display: flex;
+    flex-wrap: wrap;
+}

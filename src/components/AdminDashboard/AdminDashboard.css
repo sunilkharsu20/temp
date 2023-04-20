@@ -1,0 +1,14 @@
+.admindashboardbackground{
+    background-image: url(./images/adminDashboardBackground.jpg);
+    color: white;
+    font-size: 10vw;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+.dashboardText{
+    font-size: 500;
+}

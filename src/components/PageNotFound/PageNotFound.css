@@ -1,0 +1,34 @@
+
+.error_image{
+    width: 100%;
+
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+
+@media screen and (min-width: 500px){
+    .error_image{
+        width: 50%;
+     }
+    .column{
+        display: flex;
+        flex-direction: column;
+        width: 49vw;
+        margin-top: 15vw;
+    }
+   
+}
+.pagenotfounddiv{
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.back_button{
+    color: white;
+    background-color: blue;
+    height: 38px;
+}
