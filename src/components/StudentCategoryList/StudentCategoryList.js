@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import AdminDashboardHeader from "../AdminDashboardHeader/AdminDashboardHeader";
 import {
-  StudentListTableBody,
+ 
+  StudentListTableBodySorted,
   StudentListTableHeader,
 } from "../StudentListTable/StudentListTable";
 
@@ -11,7 +12,7 @@ export default function StudentList() {
   const [studentCategory, setStudentCategory] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:9000/api/studentData", {
+    let response = await fetch("http://localhost:9000/api/studentDataFieldWise", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,22 +46,22 @@ export default function StudentList() {
                students.filter((item)=> item.Field === data.Field).map(filterStudents=>{
                 return(
                   <div key={filterStudents._id}>
-                     <StudentListTableBody img={filterStudents.img}
-                     StudentName={filterStudents.StudentName}
-                     RollNumber={filterStudents.RollNumber}
-                     Email={filterStudents.Email}
-                     Field={filterStudents.Field}
-                     Department={filterStudents.Department}
-                     Class={filterStudents.Class}
-                     PhyMarks={filterStudents.Marks.Physics}
-                     ChemMarks={filterStudents.Marks.Chemistry}
-                     MathsMarks={filterStudents.Marks.Maths}
-                     RegDate={filterStudents.DateofCreation}
-                     Marks={filterStudents.Marks}
-                     
+                  <StudentListTableBodySorted img={filterStudents.img}
+                  StudentName={filterStudents.StudentName}
+                  RollNumber={filterStudents.RollNumber}
+                  Email={filterStudents.Email}
+                  Field={filterStudents.Field}
+                  Department={filterStudents.Department}
+                  Class={filterStudents.Class}
+                  PhyMarks={filterStudents.Marks.Physics}
+                  ChemMarks={filterStudents.Marks.Chemistry}
+                  MathsMarks={filterStudents.Marks.Maths}
+                  RegDate={filterStudents.DateofCreation}
+                  Marks={filterStudents.Marks}
+                  
 
-                     />
-                    </div>
+                  />
+                 </div>
                 )
               }):<div> No Such Data Found</div>}
               </div>

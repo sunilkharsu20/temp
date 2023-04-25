@@ -1,0 +1,6 @@
+@media screen and (max-width: 992px) {
+    .textHeaderAlign {
+      font-weight: bolder;
+       align-self: center;
+    }
+}

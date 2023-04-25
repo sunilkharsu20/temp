@@ -9,12 +9,12 @@ export default function homePage() {
   return (
     <div className="background_div d-flex flex-column">
       <p className="left_text">
-        <span className="span_text d-flex justify-content-end mb-auto ">
+        <span className="span_text d-flex justify-content-center mb-auto ">
           W<span className="span_text Red_Span ">el</span>Come
         </span>
         <br />
-        <span className="span_text d-flex justify-content-end mb-auto">To</span>
-        <span className="span_text d-flex justify-content-end mb-auto">
+        <span className="span_text d-flex justify-content-center mb-auto">To</span>
+        <span className="span_text d-flex justify-content-center mb-auto">
           R<span className="span_text Red_Span">esult</span> <span className="span_text Green_Span">C</span>hecker
         </span>
       </p>

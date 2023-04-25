@@ -3,6 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import { NavLink } from "react-router-dom";
 import Toolbar from "@mui/material/Toolbar";
+import './Navbar.css';
 
 const Header = styled(AppBar)`
   background: #ED397F;
@@ -17,10 +18,13 @@ const Tabs = styled(NavLink)`
   text-decoration : none;
 
 `;
+
+
+
 export default function Navbar(props) {
   return (
     <Header>
-      <Toolbar>
+      <Toolbar className="textHeaderAlign" >
         <Tabs to='/'>{props.title}</Tabs>
         {/* <Tabs to='/GetOldMarks'>Get Student Marks</Tabs>
         <Tabs to='/addNewMarks'>Add Student Marks</Tabs>

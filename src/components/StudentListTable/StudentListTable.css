@@ -2,3 +2,19 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.main_heading{
+    display: contents;
+    flex-wrap: wrap;
+    justify-content: start;
+    }
+
+@media screen and (max-width: 992px) {
+    .hideOnShort {
+       display: none;
+    }
+    .outerTable{
+      display: inline;
+    }
+}
+

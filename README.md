@@ -1,3 +1,11 @@
+# Student Result Management Project 2023 :heart_eyes:
+
+### Stack Used - MERN [Mongodb,Express,Reactjs,Nodejs] :file_folder:
+
+`Currently under construction`
+
+## get backend series - https://github.com/TheAvtarSingh/Backend-dev-2023
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -4,25 +4,68 @@ import './StudentListTable.css';
 
 export function StudentListTableHeader() {
   return (
-    <div className="ms-3 mt-0 me-3">
+    <div className="ms-3 mt-2 me-3" >
       <Table striped bordered hover >
-        <thead>
-          <tr >
-            <th>Sno.</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+        <tbody>
+         <tr className="main_heading">
+            
+            <td className="pe-4">StudentName</td>
+            <td className="px-3">RollNumber</td>
+            <td style={{paddingLeft:"6vw",paddingRight:"9vw"}} className="hideOnShort" >Email</td>
+           
+            <td className="px-4 hideOnShort">Field</td>
+            <td className="px-3 hideOnShort">Department
+            </td>
+            <td className="px-3 hideOnShort">Class</td>
+            <td style={{paddingLeft:"9vw",paddingRight:"14vw"}}  className="hideOnShort">Marks</td>
+            <td className="px-5 hideOnShort">DateofCreation</td>
           </tr>
-        </thead>
-       
+         
+        </tbody>
       </Table>
     </div>
+    
   );
 }
-export function StudentListTableBody(props) {
+export function StudentListTableBodyUnSorted({students}) {
+
+  return (
+
+    <div className="ms-3 mt-2 me-3" >
+      <Table striped bordered hover >
+        <tbody>
+          {
+            students.map((currStudent) =>{
+              const {_id,StudentName,RollNumber,Email,Field,Department,Class,Marks,DateofCreation} = currStudent;
+              return (
+<tr  key={_id}>
+            
+            <td className="pe-3">{StudentName}</td>
+            <td className="px-3">{RollNumber}</td>
+            <td className="px-3 hideOnShort">{Email}</td>
+           
+            <td className="px-3 hideOnShort">{Field}</td>
+            <td className="px-3 hideOnShort">{Department}
+            </td>
+            <td className="px-3 hideOnShort">{Class}</td>
+            <td className="px-3 hideOnShort">{JSON.stringify(Marks)}</td>
+            <td className="px-3 hideOnShort">{DateofCreation}</td>
+          </tr>
+         
+              )
+            })
+          }
+          
+        </tbody>
+      </Table>
+    </div>
+    
+  );
+}
+export function StudentListTableBodySorted(props) {
   var jsonobject = props.Marks;
   return (
-    <div className="ms-3 mt-0 me-3">
+    <div >
       <Table striped bordered hover >
         <tbody>
           <tr>
